@@ -6,6 +6,7 @@
   "author": "Nandi Wong <nandi@kintohub.com>",
   "license": "MIT",
   "dependencies": {
+    "bunyan": "^1.8.12",
     "restify": "^8.5.1"
   }
 }

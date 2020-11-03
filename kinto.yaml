@@ -2,13 +2,11 @@ version: 0.0.1
 kinto:
   type: BACKEND_API
   build:
-    language: DOCKERFILE
-    subfolderPath: .
-    dockerfileName: Dockerfile
+    language: DOCKERFILE    
   deploy:
-    memoryMB: 256
+    memoryMB: 512
     costOptimization: true
-    sleepMode: true
+    sleepMode: false
     protocol: HTTP
     port: 8000
     environment:

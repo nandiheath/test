@@ -1,0 +1,4 @@
+kinto:
+  type: webapp
+  build:
+    language: "dockerfile"

@@ -8,7 +8,7 @@ kinto:
   deploy:
     memoryMB: 512
     costOptimization: true
-    sleepMode: true
+    sleepMode: false
     protocol: HTTP
     port: 8000
     environment:

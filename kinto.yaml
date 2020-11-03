@@ -3,3 +3,14 @@ kinto:
   type: BACKEND_API
   build:
     language: DOCKERFILE
+    subfolderPath: .
+    dockerfileName: Dockerfile
+  deploy:
+    memoryMB: 256
+    costOptimization: true
+    sleepMode: true
+    protocol: HTTP
+    port: 8000
+    environment:
+      PATATE: 8000
+    deployTimeoutSeconds: 60

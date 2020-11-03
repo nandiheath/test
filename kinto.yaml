@@ -2,7 +2,9 @@ version: 0.0.1
 kinto:
   type: BACKEND_API
   build:
-    language: DOCKERFILE    
+    language: DOCKERFILE
+    subfolderPath: .
+    dockerfileName: Dockerfile
   deploy:
     memoryMB: 512
     costOptimization: true

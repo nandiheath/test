@@ -4,8 +4,9 @@ kinto:
   build:
     language: DOCKERFILE
     subfolderPath: .
+    dockerfileName: Dockerfile
   deploy:
-    memoryMB: 256
+    memoryMB: 512
     costOptimization: true
     sleepMode: true
     protocol: HTTP

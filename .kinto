@@ -7,10 +7,11 @@ kinto:
     dockerfileName: Dockerfile
   deploy:
     memoryMB: 512
+    cpuCores: -1
     costOptimization: true
     sleepMode: true
     protocol: HTTP
-    port: 8000
+    port: 8080
     environment:
       PATATE: 8000
     deployTimeoutSeconds: 60

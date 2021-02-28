@@ -33,7 +33,7 @@ jobs:
           tags: nandiheath/test:latest
       -
         name: Tag again
-        uses: kintproj/kinto-github-actions/tag-docker-image@docker-tag
+        uses: kintproj/kinto-github-actions/tag-docker-image@56aacb3a361b6bc2f52a56cbfc1a57d683871afa
         with:
           from_tag: nandiheath/test:latest
           to_tag: nandiheath/test:12345

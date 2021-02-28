@@ -33,10 +33,9 @@ jobs:
           context: .
           push: true
           tags: ${{ env.TAGS }}
-
       -
         name: Tag again
         uses: kintoproj/kinto-github-actions/tag-docker-image@feat/docker-tag
         with:
-          from_tag: nandiheath/test:latest
-          to_tag: nandiheath/test:12345
+          from_tag: nandiheath/test:${{ env.GITHUB_SHA }}
+          to_tag: nandiheath/test:v1.0.0

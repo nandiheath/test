@@ -24,13 +24,16 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Set env
+        run: echo "TAGS=nandiheath/test:${GITHUB_SHA},nandiheath/test:latest" >> $GITHUB_ENV
       -
         name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
-          tags: nandiheath/test:latest,'nandiheath/test:${{ env.GITHUB_SHA }}'
+          tags: ${{ env.TAGS }}
+
       -
         name: Tag again
         uses: kintoproj/kinto-github-actions/tag-docker-image@feat/docker-tag

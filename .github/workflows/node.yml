@@ -30,7 +30,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: nandiheath/test:latest,"nandiheath/test:${ env.GITHUB_SHA }"
+          tags: nandiheath/test:latest,'nandiheath/test:${{ env.GITHUB_SHA }}'
       -
         name: Tag again
         uses: kintoproj/kinto-github-actions/tag-docker-image@feat/docker-tag

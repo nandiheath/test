@@ -35,7 +35,7 @@ jobs:
           tags: ${{ env.TAGS }}
       -
         name: Tag again
-        uses: kintoproj/kinto-github-actions/tag-docker-image@feat/docker-tag
+        uses: kintoproj/kinto-github-actions/tag-docker-image@v1.1
         with:
           from_tag: nandiheath/test:${{ github.sha }}
           to_tag: nandiheath/test:v1.0.0

@@ -13,4 +13,4 @@ RUN NODE_ENV=production yarn
 COPY . /opt
 EXPOSE 8081
 
-CMD ["node", "grpc.js"]
+CMD ["node", "grpc-test.js"]

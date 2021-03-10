@@ -2,4 +2,4 @@
 
 ## Test GRPC
 
-grpcurl -import-path . -grpc test.grpc --plaintext localhost:8081 WelcomeService/greetUser
+grpcurl -import-path . -proto test.proto --plaintext localhost:8081 WelcomeService/greetUser

@@ -4,8 +4,8 @@ let protoLoader = require("@grpc/proto-loader");
 const server = new grpc.Server();
 const URL = "0.0.0.0:8081";
 
-let proto = grpc.loadPackageDefinition(
-    protoLoader.loadSync("./test.proto",{
+let grpc = grpc.loadPackageDefinition(
+    protoLoader.loadSync("./test.grpc",{
         keepCase: true,
         longs: String,
         enums: String,
@@ -18,7 +18,7 @@ function greetUser(call, callBack) {
     callBack(null, {message: `Hello ${call.request.name} welcome to the world`});
 }
 
-server.addService(proto.WelcomeService.service, { greetUser: greetUser });
+server.addService(grpc.WelcomeService.service, { greetUser: greetUser });
 
 server.bind(URL, grpc.ServerCredentials.createInsecure());
 

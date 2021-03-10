@@ -1,0 +1,14 @@
+syntax = "proto3"; // this is the declaration of the proto language syntax.
+// this model is for request
+message WelcomeRequest {
+  string name = 1; // Here we are declaring the fields need to be transmitted in buffer.
+}
+// This model is for response.
+message WelcomeResponse {
+ string message = 1;  // Here we are declaring the fields need to be transmitted in buffer.
+}
+
+service WelcomeService {
+  // this service method needs to be implemented.
+  rpc greetUser(WelcomeRequest) returns (WelcomeResponse) {};
+}
